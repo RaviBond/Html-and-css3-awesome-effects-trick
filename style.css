@@ -1,0 +1,51 @@
+/*Effect-1*/
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.mobile{
+	position: relative;
+	background: #121212;
+	width: 295px;
+	height: 620px;
+	border-radius: 40px;
+}
+.m-screen{
+	position: absolute;
+	top: 20px;
+	bottom: 20px;
+	background: #000;
+	left: 6px;
+	right: 6px;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.m-screen:before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: -50%;
+	background: rgba(225,225,225,0.2);
+	z-index: 1;
+	transform:skewX(-15deg);
+}
+.m-screen img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0;
+	transition: 0.5s;
+
+}
+.m-screen:hover img{
+	opacity: 1;
+}
